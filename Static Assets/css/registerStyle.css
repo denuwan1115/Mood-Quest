@@ -1,0 +1,141 @@
+
+body {
+    background: linear-gradient(180deg, #541B3D 9.44%, #962558 100%);
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+.fade-wrapper {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-wrapper.fade-in {
+    opacity: 1;
+}
+
+.fade-wrapper.fade-out {
+    opacity: 0;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #EA3788;
+    text-shadow: 0px 4px 6px rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+.container {
+    margin-top: 50px; 
+}
+
+.regform-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    animation: fadeInCard 1.5s ease-in-out;
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #EA3788;
+    margin-bottom: 20px;
+}
+
+.regform-align {
+    width: 100%;
+}
+
+.regform-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.regform-group label {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #EA3788;
+}
+
+.reset-btn, .register-btn {
+    background-color: #EA3788;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reset-btn:hover, .register-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(234, 55, 136, 0.8);
+}
+
+.already-account {
+    font-size: 14px;
+    color: #D9D9D9;
+}
+
+.login-link {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    color: #EA3788;
+    text-decoration: underline;
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

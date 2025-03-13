@@ -286,7 +286,7 @@ if (!$_SESSION['loggedIn']) {
 
             <div class="container">
                 <div class="content">
-                    <h2 class="index-title">Choose Your Difficulty</h2>
+                    <h2 class="index-title">Choose Your Mood</h2>
                     <div class="difficulty-buttons">
                         <button class="difficulty-btn" id="easyBtn">
                             <i class="bi bi-emoji-smile difficulty-icon"></i>

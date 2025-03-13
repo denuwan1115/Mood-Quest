@@ -1,0 +1,194 @@
+body {
+    background: linear-gradient(180deg, #541B3D 9.44%, #962558 100%);
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.image-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+ 
+.navbar {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;  
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #EA3788;
+    text-shadow: 0px 4px 6px rgba(255, 255, 255, 0.5);
+}
+
+.links {
+    display: flex;  
+    gap: 20px; 
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #EA3788;
+    transform: scale(1.1);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #EA3788;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.custom-icon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.index-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease;
+}
+
+.difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.difficulty-btn {
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #EA3788;
+    border-radius: 20px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.difficulty-btn:hover {
+    background-color: #EA3788;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(234, 55, 136, 0.8);
+}
+
+.difficulty-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+    animation: iconBounce 2s infinite ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes iconBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fade-wrapper {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.fade-wrapper.fade-in {
+    opacity: 1;
+}
+
+.fade-wrapper.fade-out {
+    opacity: 0;
+}
+#easyBtn {
+    background: linear-gradient(to bottom, #4caf50, #81c784);
+    border: 2px solid #4caf50;
+}
+
+#easyBtn:hover {
+    background: linear-gradient(to bottom, #66bb6a, #388e3c);
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.8);
+}
+
+#mediumBtn {
+    background: linear-gradient(to bottom, #fbc02d, #ffee58);
+    border: 2px solid #fbc02d;
+}
+
+#mediumBtn:hover {
+    background: linear-gradient(to bottom, #fdd835, #f9a825);
+    box-shadow: 0 0 20px rgba(251, 192, 45, 0.8);
+}
+
+#hardBtn {
+    background: linear-gradient(to bottom, #d32f2f, #ef5350);
+    border: 2px solid #d32f2f;
+}
+
+#hardBtn:hover {
+    background: linear-gradient(to bottom, #e53935, #c62828);
+    box-shadow: 0 0 20px rgba(211, 47, 47, 0.8);
+}

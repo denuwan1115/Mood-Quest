@@ -1,0 +1,204 @@
+/* General Styles */
+body {
+    background: linear-gradient(180deg, #541B3D 9.44%, #962558 100%);
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 1s ease-in-out;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #EA3788;
+    text-shadow: 0px 4px 6px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #EA3788;
+    transform: scale(1.1);
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #EA3788;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Leaderboard Styles */
+.scores-wrapper {
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.scores-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #EA3788;
+    text-align: center;
+}
+
+.scores-table {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.scores-table thead {
+    background-color: #EA3788;
+    color: white;
+}
+
+.scores-table th, .scores-table td {
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+/* Ensure hover effects work for all rows */
+.scores-table tbody tr {
+    animation: rowSlideUp 0.5s ease forwards;
+    opacity: 1;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scores-table tbody tr:hover {
+    background-color: rgba(234, 55, 136, 0.2);
+    transform: scale(1.01);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rowSlideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.table-row:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.table-row:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.table-row:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.table-row:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.table-row:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.table-row:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.table-row:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+.table-row:nth-child(8) {
+    animation-delay: 1.6s;
+}
+
+.table-row:nth-child(9) {
+    animation-delay: 1.8s;
+}
+
+.table-row:nth-child(10) {
+    animation-delay: 2s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .scores-title {
+        font-size: 24px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .scores-table th, .scores-table td {
+        font-size: 14px;
+    }
+}

@@ -166,7 +166,7 @@ if (!$_SESSION['loggedIn']) {
 
         .difficulty-btn {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 15px 20px;
             font-family: 'Orbitron', sans-serif;
             font-size: 1.2rem;
             font-weight: bold;
@@ -463,15 +463,15 @@ if (!$_SESSION['loggedIn']) {
                     <div class="difficulty-buttons">
                         <button class="difficulty-btn" id="easyBtn">
                             <i class="bi bi-emoji-smile difficulty-icon"></i>
-                            Easy
+                            Relax
                         </button>
                         <button class="difficulty-btn" id="mediumBtn">
                             <i class="bi bi-emoji-neutral difficulty-icon"></i>
-                            Medium
+                            Focus
                         </button>
                         <button class="difficulty-btn" id="hardBtn">
                             <i class="bi bi-emoji-angry difficulty-icon"></i>
-                            Hard
+                            Extreme
                         </button>
                     </div>
                 </div>
@@ -597,18 +597,18 @@ if (!$_SESSION['loggedIn']) {
             // Update title based on selected mode
             let jokeTitle = document.getElementById('jokeTitle');
             if (mode === 'easy') {
-                jokeTitle.textContent = "Easy Mode Joke";
-                selectedMode = 'Easy';
+                jokeTitle.textContent = "Relax Mode Joke";
+                selectedMode = 'Relax';
                 timeForMode = 80;
                 modePage = 'relaxedMode.php';
             } else if (mode === 'medium') {
-                jokeTitle.textContent = "Medium Mode Joke";
-                selectedMode = 'Medium';
+                jokeTitle.textContent = "Focus Mode Joke";
+                selectedMode = 'Focus';
                 timeForMode = 60;
                 modePage = 'focusedMode.php';
             } else {
-                jokeTitle.textContent = "Hard Mode Joke";
-                selectedMode = 'Hard';
+                jokeTitle.textContent = "Extreme Mode Joke";
+                selectedMode = 'Extreme';
                 timeForMode = 45;
                 modePage = 'extremeMode.php';
             }

@@ -370,24 +370,24 @@ if (!$_SESSION['loggedIn']) {
 
         // Original difficulty selection functionality
         document.getElementById('easyBtn').addEventListener('click', () => {
-            alert('Easy mode selected!');
+            alert('Relaxed mode selected!');
             localStorage.setItem('timeLeft', 80);  
             localStorage.setItem('difficulty', 'Easy');
-            window.location.href = 'easyMode.php'; 
+            window.location.href = 'relaxedMode.php'; 
         });
 
         document.getElementById('mediumBtn').addEventListener('click', () => {
-            alert('Medium mode selected!');
+            alert('Focused mode selected!');
             localStorage.setItem('timeLeft', 60);  
             localStorage.setItem('difficulty', 'Medium');
-            window.location.href = 'mediumMode.php';  
+            window.location.href = 'extremeMode.php';  
         });
 
         document.getElementById('hardBtn').addEventListener('click', () => {
-            alert('Hard mode selected!');
+            alert('Extreme mode selected!');
             localStorage.setItem('timeLeft', 45);  
             localStorage.setItem('difficulty', 'Hard');
-            window.location.href = 'hardMode.php';  
+            window.location.href = 'focusedMode.php';  
         });
 
         

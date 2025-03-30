@@ -152,20 +152,6 @@ if (!$_SESSION['loggedIn']) {
             width: 600px;
         }
 
-        .puzzle-icon {
-            width: 200px;
-            height: 200px;
-            margin-bottom: 2rem;
-            border: 2px solid #00ffcc;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            animation: pulse 2s ease-in-out infinite;
-            position: relative;
-            z-index: 6;
-        }
-
         .landing-title {
             font-family: 'Press Start 2P', cursive;
             color: #ffcc00;
@@ -505,8 +491,7 @@ if (!$_SESSION['loggedIn']) {
     <div class="crt-flicker"></div>
 
     <!-- Game Elements in Background -->
-    <div class="game-elements">
-        <svg class="game-element" style="top: 10%; left: 10%;" width="50" height="50" viewBox="0 0 24 24">
+    <div class="game-elements">     <svg class="game-element" style="top: 10%; left: 10%;" width="50" height="50" viewBox="0 0 24 24">
             <path fill="#00ffcc" d="M4,2H20A2,2 0 0,1 22,4V20A2,2 0 0,1 20,22H4A2,2 0 0,1 2,20V4A2,2 0 0,1 4,2M5,5V19H19V5H5Z" />
         </svg>
         <svg class="game-element" style="top: 30%; right: 15%;" width="60" height="60" viewBox="0 0 24 24">
@@ -535,7 +520,7 @@ if (!$_SESSION['loggedIn']) {
             </div>
         </nav>
         <div class="landing-content">
-            <div id="puzzle-animation" class="puzzle-icon"></div>
+            <div id="puzzle-animation" class="puzzle-icon"><img src="../Static Assets/images/Logo_final.png" alt=""></div>
             <h1 class="landing-title animate__animated animate__zoomIn">Welcome to Mood Quest</h1>
             <p class="tagline animate__animated animate__fadeInUp">Challenge your mind and conquer the puzzles!</p>
             <a href="howtoplay.php" class="cyber-button">

@@ -682,10 +682,6 @@ if (isset($_GET['new'])) {
     </script>
 </body>
 </html><?php
-include '../Controller/config.php';
-if (!$_SESSION['loggedIn']) {
-    redirect("login.php");
-}
 
 if (isset($_GET['new'])) {
     echo '<script>localStorage.removeItem("timeLeft");</script>';

@@ -367,6 +367,10 @@ if (isset($_GET['new'])) {
     </div>
     <div id="note" class="text-center" style="display: none;"></div>
 
+    <audio id="correctSound" src="../Static Assets/audio/Correct answer.mp3"></audio>
+    <audio id="wrongSound" src="../Static Assets/audio/Wrong answer.mp3"></audio>
+    <audio id="timeoutSound" src="../Static Assets/audio/Time out.mp3"></audio>
+
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <!-- Bootstrap JS -->
@@ -424,6 +428,10 @@ if (isset($_GET['new'])) {
             retina_detect: true
         });
 
+        const correctSound = document.getElementById('correctSound');
+        const wrongSound = document.getElementById('wrongSound');
+        const timeoutSound = document.getElementById('timeoutSound');
+
         // Game variables
         let timeLeft = parseInt(localStorage.getItem('timeLeft')) || 80;
         let score = parseInt(localStorage.getItem('score')) || 0;
@@ -455,6 +463,7 @@ if (isset($_GET['new'])) {
             
             isGameActive = false;
             clearInterval(timer);
+            timeoutSound.play();
             
             fetch('../Controller/updateScore.php', {
                 method: 'POST',
@@ -500,6 +509,8 @@ if (isset($_GET['new'])) {
             
             isGameActive = false;
             clearInterval(timer);
+            timeoutSound.play();
+
             fetch('../Controller/updateScore.php', {
                 method: 'POST',
                 headers: {
@@ -549,6 +560,7 @@ if (isset($_GET['new'])) {
                     numQuestions++;
                     updateUI();
                     fetchImage();
+                    correctSound.play();
                     Swal.fire({
                         title: "Correct Answer!",
                         text: "You earned 10 points!",
@@ -558,6 +570,7 @@ if (isset($_GET['new'])) {
                     lives--;
                     localStorage.setItem('lives', lives);
                     updateUI();
+                    wrongSound.play();
                     Swal.fire({
                         title: "Wrong Answer",
                         text: `That answer is incorrect. Lives remaining: ${lives}`,

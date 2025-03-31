@@ -10,7 +10,6 @@ if (isset($_POST['updatebtn'])) {
 
     //retrieve the data for upadating the user's profile
     $updatefullName = $_POST['updatefullName'];
-    $updateage = $_POST['updateage'];
     $currentPassword = $_POST['currentPassword'];
     $newPassword = $_POST['newPassword'];
 
@@ -20,7 +19,7 @@ if (isset($_POST['updatebtn'])) {
 
         $hashedNewPassword = password_hash($newPassword, PASSWORD_DEFAULT);
 
-        $sql = "UPDATE `users` SET `fullName` = '$updatefullName', `age` = '$updateage', `password` = '$hashedNewPassword' WHERE `users`.`email` = '$userEmail';"; //update the new password
+        $sql = "UPDATE `users` SET `fullName` = '$updatefullName', `password` = '$hashedNewPassword' WHERE `users`.`email` = '$userEmail';"; //update the new password
         $result = mysqli_query($conn, $sql);
 
         if ($result) {

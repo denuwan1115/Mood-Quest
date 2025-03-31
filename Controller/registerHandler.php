@@ -2,7 +2,6 @@
 if (isset($_POST['register'])) {
     $fullName = mysqli_real_escape_string($conn, $_POST['fullName']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $age = mysqli_real_escape_string($conn, $_POST['age']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     $confirmPassword = mysqli_real_escape_string($conn, $_POST['confirmPassword']);
 
@@ -26,7 +25,7 @@ if (isset($_POST['register'])) {
             // Hash the password and insert into the database
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-            mysqli_query($conn, "INSERT INTO `users`(fullName, email, age, password) VALUES('$fullName', '$email', '$age', '$hashedPassword')") or die('Query failed');
+            mysqli_query($conn, "INSERT INTO `users`(fullName, email, password) VALUES('$fullName', '$email', '$hashedPassword')") or die('Query failed');
 
             $message[] = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                             Registered successfully!

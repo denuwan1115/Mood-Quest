@@ -217,10 +217,6 @@ include '../Controller/registerHandler.php';
                     <span id="emailError" class="error"></span>
                 </div>
                 <div class="regform-group">
-                    <label for="age">Age</label>
-                    <input type="number" class="input-field" id="age" name="age" placeholder="Enter your age" min="0" required>
-                </div>
-                <div class="regform-group">
                     <label for="password">Password</label>
                     <input type="password" class="input-field" id="password" name="password" placeholder="Enter password" required>
                     <span id="passwordError" class="error"></span>

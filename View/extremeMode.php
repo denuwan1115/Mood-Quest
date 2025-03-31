@@ -24,7 +24,7 @@ if (isset($_GET['new'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mood Quest - Focused Mode</title>
+    <title>Mood Quest - Extreme Mode</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -43,11 +43,10 @@ if (isset($_GET['new'])) {
             overflow: hidden;
             font-family: 'Poppins', sans-serif;
             color: #fff;
-            background: linear-gradient(135deg, #4a2c6b, #3a2053, #1a0f27);
+            background: linear-gradient(135deg, #6b2c2c, #531f1f, #270f0f);
             position: relative;
         }
 
-        /* Particles.js Container */
         #particles-js {
             position: absolute;
             width: 100%;
@@ -63,17 +62,17 @@ if (isset($_GET['new'])) {
             justify-content: space-between;
             align-items: center;
             padding: 0 2rem;
-            background: rgba(74, 44, 107, 0.8);
-            border-bottom: 2px solid #b388ff;
-            box-shadow: 0 0 15px rgba(179, 136, 255, 0.3);
+            background: rgba(107, 44, 44, 0.8);
+            border-bottom: 2px solid #ff5555;
+            box-shadow: 0 0 15px rgba(255, 85, 85, 0.3);
             z-index: 10;
         }
 
         .logo {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.2rem;
-            color: #b388ff;
-            text-shadow: 0 0 8px rgba(179, 136, 255, 0.5);
+            color: #ff5555;
+            text-shadow: 0 0 8px rgba(255, 85, 85, 0.5);
             animation: logoPulse 2s ease-in-out infinite;
         }
 
@@ -84,16 +83,16 @@ if (isset($_GET['new'])) {
 
         .nav-link {
             font-family: 'Poppins', sans-serif;
-            color: #d1c4e9;
+            color: #e9c4c4;
             text-decoration: none;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            text-shadow: 0 0 5px rgba(209, 196, 233, 0.5);
+            text-shadow: 0 0 5px rgba(233, 196, 196, 0.5);
         }
 
         .nav-link:hover {
-            color: #b388ff;
-            text-shadow: 0 0 8px rgba(179, 136, 255, 0.8);
+            color: #ff5555;
+            text-shadow: 0 0 8px rgba(255, 85, 85, 0.8);
             transform: scale(1.05) translateY(-2px);
             display: inline-block;
         }
@@ -107,10 +106,10 @@ if (isset($_GET['new'])) {
             position: relative;
             margin-top: 120px;
             padding: 2rem;
-            border: 2px solid #b388ff;
+            border: 2px solid #ff5555;
             border-radius: 15px;
-            box-shadow: 0 0 20px rgba(179, 136, 255, 0.4);
-            background: rgba(74, 44, 107, 0.7);
+            box-shadow: 0 0 20px rgba(255, 85, 85, 0.4);
+            background: rgba(107, 44, 44, 0.7);
             z-index: 5;
             max-width: 800px;
             margin-left: auto;
@@ -123,21 +122,21 @@ if (isset($_GET['new'])) {
             justify-content: space-between;
             margin-bottom: 2rem;
             font-size: 1.1rem;
-            color: #d1c4e9;
-            text-shadow: 0 0 5px rgba(209, 196, 233, 0.5);
+            color: #e9c4c4;
+            text-shadow: 0 0 5px rgba(233, 196, 196, 0.5);
             animation: dataFadeIn 1.2s ease-in-out;
         }
 
         .single-Data span {
             padding: 8px 15px;
-            background: rgba(179, 136, 255, 0.2);
+            background: rgba(255, 85, 85, 0.2);
             border-radius: 8px;
             transition: all 0.3s ease;
             animation: scoreBoxPulse 3s ease-in-out infinite;
         }
 
         .single-Data span:hover {
-            background: rgba(179, 136, 255, 0.4);
+            background: rgba(255, 85, 85, 0.4);
             transform: scale(1.05) rotate(2deg);
         }
 
@@ -164,9 +163,9 @@ if (isset($_GET['new'])) {
         .imgApi {
             width: 100%;
             max-width: 400px;
-            border: 2px solid #b388ff;
+            border: 2px solid #ff5555;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(179, 136, 255, 0.3);
+            box-shadow: 0 0 15px rgba(255, 85, 85, 0.3);
             padding: 1rem;
             background: rgba(255, 255, 255, 0.1);
             animation: gentlePulse 3s ease-in-out infinite, imageZoom 2s ease-in-out;
@@ -184,14 +183,14 @@ if (isset($_GET['new'])) {
 
         .btn-container {
             text-align: center;
-            color: #d1c4e9;
+            color: #e9c4c4;
             animation: buttonContainerFade 1.8s ease-in-out;
         }
 
         .btn-container p {
             margin-bottom: 1rem;
             font-size: 1.2rem;
-            text-shadow: 0 0 5px rgba(209, 196, 233, 0.5);
+            text-shadow: 0 0 5px rgba(233, 196, 196, 0.5);
             animation: textGlow 2s ease-in-out infinite alternate;
         }
 
@@ -200,28 +199,27 @@ if (isset($_GET['new'])) {
             padding: 10px 15px;
             font-family: 'Poppins', sans-serif;
             font-size: 1.1rem;
-            color: #3a2053;
-            background: linear-gradient(135deg, #b388ff, #d1c4e9);
+            color: #531f1f;
+            background: linear-gradient(135deg, #ff5555, #e9c4c4);
             border: none;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(179, 136, 255, 0.3);
+            box-shadow: 0 0 10px rgba(255, 85, 85, 0.3);
             cursor: pointer;
             transition: all 0.3s ease;
             animation: buttonPulse 2.5s ease-in-out infinite, buttonBounce 0.5s ease-in-out;
         }
 
         .btn-container button:hover {
-            background: linear-gradient(135deg, #d1c4e9, #b388ff);
-            box-shadow: 0 0 15px rgba(179, 136, 255, 0.5);
+            background: linear-gradient(135deg, #e9c4c4, #ff5555);
+            box-shadow: 0 0 15px rgba(255, 85, 85, 0.5);
             transform: scale(1.1) rotate(3deg);
             animation: buttonHoverGlow 1s ease-in-out infinite;
         }
 
-        /* New animations */
         @keyframes logoPulse {
-            0% { transform: scale(1); text-shadow: 0 0 8px rgba(179, 136, 255, 0.5); }
-            50% { transform: scale(1.05); text-shadow: 0 0 12px rgba(179, 136, 255, 0.8); }
-            100% { transform: scale(1); text-shadow: 0 0 8px rgba(179, 136, 255, 0.5); }
+            0% { transform: scale(1); text-shadow: 0 0 8px rgba(255, 85, 85, 0.5); }
+            50% { transform: scale(1.05); text-shadow: 0 0 12px rgba(255, 85, 85, 0.8); }
+            100% { transform: scale(1); text-shadow: 0 0 8px rgba(255, 85, 85, 0.5); }
         }
 
         @keyframes containerFadeIn {
@@ -230,9 +228,9 @@ if (isset($_GET['new'])) {
         }
 
         @keyframes containerPulse {
-            0% { box-shadow: 0 0 15px rgba(179, 136, 255, 0.3); }
-            50% { box-shadow: 0 0 25px rgba(179, 136, 255, 0.5); }
-            100% { box-shadow: 0 0 15px rgba(179, 136, 255, 0.3); }
+            0% { box-shadow: 0 0 15px rgba(255, 85, 85, 0.3); }
+            50% { box-shadow: 0 0 25px rgba(255, 85, 85, 0.5); }
+            100% { box-shadow: 0 0 15px rgba(255, 85, 85, 0.3); }
         }
 
         @keyframes dataFadeIn {
@@ -241,9 +239,9 @@ if (isset($_GET['new'])) {
         }
 
         @keyframes scoreBoxPulse {
-            0% { box-shadow: 0 0 5px rgba(179, 136, 255, 0.2); transform: scale(1); }
-            50% { box-shadow: 0 0 10px rgba(179, 136, 255, 0.4); transform: scale(1.02); }
-            100% { box-shadow: 0 0 5px rgba(179, 136, 255, 0.2); transform: scale(1); }
+            0% { box-shadow: 0 0 5px rgba(255, 85, 85, 0.2); transform: scale(1); }
+            50% { box-shadow: 0 0 10px rgba(255, 85, 85, 0.4); transform: scale(1.02); }
+            100% { box-shadow: 0 0 5px rgba(255, 85, 85, 0.2); transform: scale(1); }
         }
 
         @keyframes gameContainerSlide {
@@ -252,9 +250,9 @@ if (isset($_GET['new'])) {
         }
 
         @keyframes gentlePulse {
-            0% { box-shadow: 0 0 10px rgba(179, 136, 255, 0.3); transform: scale(1); }
-            50% { box-shadow: 0 0 15px rgba(179, 136, 255, 0.5); transform: scale(1.01); }
-            100% { box-shadow: 0 0 10px rgba(179, 136, 255, 0.3); transform: scale(1); }
+            0% { box-shadow: 0 0 10px rgba(255, 85, 85, 0.3); transform: scale(1); }
+            50% { box-shadow: 0 0 15px rgba(255, 85, 85, 0.5); transform: scale(1.01); }
+            100% { box-shadow: 0 0 10px rgba(255, 85, 85, 0.3); transform: scale(1); }
         }
 
         @keyframes imageZoom {
@@ -268,14 +266,14 @@ if (isset($_GET['new'])) {
         }
 
         @keyframes textGlow {
-            from { text-shadow: 0 0 5px rgba(209, 196, 233, 0.5); }
-            to { text-shadow: 0 0 10px rgba(209, 196, 233, 0.8); }
+            from { text-shadow: 0 0 5px rgba(233, 196, 196, 0.5); }
+            to { text-shadow: 0 0 10px rgba(233, 196, 196, 0.8); }
         }
 
         @keyframes buttonPulse {
-            0% { box-shadow: 0 0 8px rgba(179, 136, 255, 0.3); transform: scale(1); }
-            50% { box-shadow: 0 0 12px rgba(179, 136, 255, 0.5); transform: scale(1.02); }
-            100% { box-shadow: 0 0 8px rgba(179, 136, 255, 0.3); transform: scale(1); }
+            0% { box-shadow: 0 0 8px rgba(255, 85, 85, 0.3); transform: scale(1); }
+            50% { box-shadow: 0 0 12px rgba(255, 85, 85, 0.5); transform: scale(1.02); }
+            100% { box-shadow: 0 0 8px rgba(255, 85, 85, 0.3); transform: scale(1); }
         }
 
         @keyframes buttonBounce {
@@ -285,9 +283,9 @@ if (isset($_GET['new'])) {
         }
 
         @keyframes buttonHoverGlow {
-            0% { box-shadow: 0 0 15px rgba(179, 136, 255, 0.5); }
-            50% { box-shadow: 0 0 25px rgba(179, 136, 255, 0.7); }
-            100% { box-shadow: 0 0 15px rgba(179, 136, 255, 0.5); }
+            0% { box-shadow: 0 0 15px rgba(255, 85, 85, 0.5); }
+            50% { box-shadow: 0 0 25px rgba(255, 85, 85, 0.7); }
+            100% { box-shadow: 0 0 15px rgba(255, 85, 85, 0.5); }
         }
 
         @keyframes heartBeat {
@@ -340,7 +338,7 @@ if (isset($_GET['new'])) {
         <div class="single-Data">
             <span>Question: <span id="question-number">1</span></span>
             <span>Score: <span id="score">0</span></span>
-            <span>Time: <span id="timer">80</span></span>
+            <span>Time: <span id="timer">45</span></span>
             <span>Lives: <span id="lives-container" class="lives-container">
                 <i class="bi bi-heart-fill heart"></i>
                 <i class="bi bi-heart-fill heart"></i>
@@ -368,6 +366,9 @@ if (isset($_GET['new'])) {
         </div>
     </div>
     <div id="note" class="text-center" style="display: none;"></div>
+    <audio id="correctSound" src="../Static Assets/audio/Correct answer.mp3"></audio>
+    <audio id="wrongSound" src="../Static Assets/audio/Wrong answer.mp3"></audio>
+    <audio id="timeoutSound" src="../Static Assets/audio/Time out.mp3"></audio>
 
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -379,7 +380,7 @@ if (isset($_GET['new'])) {
         particlesJS('particles-js', {
             particles: {
                 number: { value: 60, density: { enable: true, value_area: 800 } },
-                color: { value: '#b388ff' },
+                color: { value: '#ff5555' },
                 shape: {
                     type: 'circle',
                     stroke: { width: 0, color: '#000000' },
@@ -397,7 +398,7 @@ if (isset($_GET['new'])) {
                 line_linked: {
                     enable: true,
                     distance: 150,
-                    color: '#b388ff',
+                    color: '#ff5555',
                     opacity: 0.3,
                     width: 1
                 },
@@ -426,8 +427,12 @@ if (isset($_GET['new'])) {
             retina_detect: true
         });
 
+        const correctSound = document.getElementById('correctSound');
+        const wrongSound = document.getElementById('wrongSound');
+        const timeoutSound = document.getElementById('timeoutSound');
+        
         // Game variables
-        const TOTAL_TIME = 80; // Total game time in seconds
+        const TOTAL_TIME = 45;
         let timeLeft = parseInt(localStorage.getItem('timeLeft')) || TOTAL_TIME;
         let score = parseInt(localStorage.getItem('score')) || 0;
         let numQuestions = parseInt(localStorage.getItem('numQuestions')) || 1;
@@ -474,6 +479,7 @@ if (isset($_GET['new'])) {
             
             isGameActive = false;
             clearInterval(timer);
+            timeoutSound.play();
             
             fetch('../Controller/updateScore.php', {
                 method: 'POST',
@@ -519,6 +525,8 @@ if (isset($_GET['new'])) {
             
             isGameActive = false;
             clearInterval(timer);
+            timeoutSound.play();
+
             fetch('../Controller/updateScore.php', {
                 method: 'POST',
                 headers: {
@@ -563,20 +571,22 @@ if (isset($_GET['new'])) {
             
             if (timeLeft > 0 && lives > 0) {
                 if (selectedNumber == solution) {
-                    score += 5;
+                    score += 2;
                     localStorage.setItem('score', score);
                     numQuestions++;
                     updateUI();
                     fetchImage();
+                    correctSound.play();
                     Swal.fire({
                         title: "Correct Answer!",
-                        text: "You earned 5 points!",
+                        text: "You earned 2 points!",
                         icon: "success"
                     });
                 } else {
                     lives--;
                     localStorage.setItem('lives', lives);
                     updateUI();
+                    wrongSound.play();
                     Swal.fire({
                         title: "Wrong Answer",
                         text: `That answer is incorrect. Lives remaining: ${lives}`,
@@ -650,7 +660,6 @@ if (isset($_GET['new'])) {
         });
 
         document.addEventListener("DOMContentLoaded", function() {
-            // Calculate initial time left based on stored start time
             timeLeft = calculateTimeLeft();
             updateUI();
             fetchImage();
@@ -677,7 +686,6 @@ if (isset($_GET['new'])) {
                 });
                 scoreSent = true;
             }
-            // Don't remove gameStartTime here to persist timer
             localStorage.removeItem('timeLeft');
             localStorage.removeItem('score');
             localStorage.removeItem('numQuestions');

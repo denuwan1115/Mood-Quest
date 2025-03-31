@@ -295,10 +295,6 @@ include '../Controller/updateHandler.php';
                         <input type="text" class="input-field" id="updatefullName" name="updatefullName" required value="<?= $row['fullName'] ?>">
                     </div>
                     <div class="profileform-group">
-                        <label for="age">Age:</label>
-                        <input type="number" class="input-field" id="updateage" name="updateage" min="0" required value="<?= $row['age'] ?>">
-                    </div>
-                    <div class="profileform-group">
                         <label for="currentPassword">Current Password:</label>
                         <input type="password" class="input-field" id="currentPassword" name="currentPassword" required>
                     </div>
